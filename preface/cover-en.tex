@@ -1,0 +1,46 @@
+% preface/cover-en.tex - 使用 info.tex 中定义的命令
+\begin{titlepage}
+
+    \centering % 居中页面内容
+    \renewcommand{\baselinestretch}{1.0}\normalsize % 封面通常用单倍行距
+
+    %\vspace*{2cm} % 顶部留白
+
+    {\fontsize{20}{24}\bfseries Master's\hspace{0.5em}Degree\hspace{0.5em}Dissertation\par} % 顶部标题
+
+
+\raggedright  % 左对齐
+
+    \vspace{6cm}
+    {
+      \heiti
+      \zihao{-1}
+      \bfseries
+      Title：\myThesisTitleEN
+    }
+    
+    \vspace{5cm}
+    
+    % --- 底部信息块 ---
+    \large
+    \begin{tabular}{@{}ll@{}}
+        \rule{0pt}{3ex}
+        \textbf{M.S. candidate:} & \textbf{\myAuthorNameEN} \\ % <--- 使用英文作者名命令
+        \rule{0pt}{3ex}
+        \textbf{Advisor:} & \textbf{\mySupervisorNameEN} \\ % <--- 使用英文导师名命令
+        \rule{0pt}{3ex}
+        \textbf{Field of research:} & \textbf{\myMajorNameEN} \\ % <--- 使用英文专业名命令
+        \rule{0pt}{3ex}
+        \textbf{Date of defence:} & \textbf{\myDefenseDate} \\ % <--- 使用答辩日期命令
+        \rule{0pt}{3ex}
+        \textbf{Chairman of defence committee:} & \textbf{\myDefenceChairman} \\ % <--- 使用答辩主席命令 (定义在 main.tex 或 info.tex)
+        \rule{0pt}{3ex}
+        \textbf{Degree awarded by:} & \textbf{Dalian University} \\
+    \end{tabular}
+
+    \vspace*{3cm} % 底部留白
+   % \renewcommand{\baselinestretch}{\mybaselinestretch}\normalsize % 恢复行距 (如果需要)
+
+
+\vfill % 填充剩余空间，避免自动分页
+\end{titlepage}

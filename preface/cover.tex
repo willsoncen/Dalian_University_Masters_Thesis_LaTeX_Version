@@ -1,0 +1,71 @@
+% preface/cover.tex - 设计封面，使用 \newcommand 定义的命令
+
+\begin{titlepage}
+    \centering
+    \renewcommand{\baselinestretch}{1.0}\normalsize
+
+    % --- 页眉左右角信息 ---
+    %\vspace*{3.5cm}
+    \begin{minipage}[t]{0.45\textwidth}
+        \raggedright \zihao{-4} \linespread{1.5}\selectfont
+        \makebox[3em][l]{\textbf{分类号}} \underline{\makebox[3cm]{\hfill\raisebox{0.5ex}{\textbf{\ClassificationNumber}}\hfill}} \\
+        \makebox[3em][l]{\textbf{UDC}} \underline{\makebox[3cm]{\hfill\raisebox{0.5ex}{\textbf{\UDC}}\hfill}}
+    \end{minipage}%
+    \hspace{0.05\textwidth}%
+    \begin{minipage}[t]{0.45\textwidth}
+        \raggedleft \zihao{-4} \linespread{1.5}\selectfont  % 设置1.5倍行距
+        \makebox[3em][l]{\textbf{密级}} \underline{\makebox[3cm]{\hfill\raisebox{0.5ex}{\textbf{\Secretlevel}}\hfill}} \\
+        \makebox[3em][l]{\textbf{编号}} \underline{\makebox[3cm]{\hfill\raisebox{0.5ex}{\textbf{\No}}\hfill}}
+    \end{minipage}
+
+    % --- 学校和论文类型 ---
+    \vspace{2cm}
+    {\zihao{-1}\heiti\bfseries  大\hspace{0.8em}连\hspace{0.8em}大\hspace{0.8em}学} % 调用自定义命令
+    \vskip 0.5cm
+    {\zihao{-1}\zhongsong\bfseries 硕\hspace{0.8em}士\hspace{0.8em}学\hspace{0.8em}位\hspace{0.8em}论\hspace{0.8em}文} % 调用自定义命令
+    \vfill
+
+    \scalebox{1.0}{\includegraphics[width=4.87cm]{preface/logo.png}}
+
+    % --- 论文标题 ---
+    \vspace{2cm}
+    {
+      \raggedright  % 左对齐
+      \heiti
+      \fontsize{20}{24}\heiti
+      \bfseries
+      论\hspace{0.3em}文\hspace{0.3em}题\hspace{0.3em}目
+      \underline{\makebox[11cm]{\hfill\raisebox{0.5ex}{\myThesisTitle}\hfill}} \\
+      \vspace{10pt} % 下划线与副标题下划线之间的间距
+      \hspace{3.2em} \underline{\makebox[11cm]{\hfill\raisebox{0.5ex}{\mysubTitle}\hfill}}
+    }
+    \vfill
+
+
+    % --- 作者、导师等信息 ---  
+\newcommand{\coverlength}{2.7cm}
+\vskip 1.0cm 
+\begin{center}
+\renewcommand\arraystretch{2}
+\begin{tabular}{l}
+\makebox[\coverlength][s]{\zihao{4}\kaishu \bf 姓名}~~\\
+\makebox[\coverlength][s]{\zihao{4}\kaishu \bf 学科、专业}\\ 
+\makebox[\coverlength][s]{\zihao{4}\kaishu \bf 指导教师}\\
+\makebox[\coverlength][s]{\zihao{4}\kaishu \bf 年级}\\ 
+\makebox[\coverlength][s]{\zihao{4}\kaishu \bf 论文答辩日期}
+\end{tabular}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{5cm}@{}}
+{\zihao{4}\kaishu \bf  ~~\myAuthorName~~}\\ 
+\hline {\zihao{4}\kaishu \bf ~~\myMajorName~~}\\ 
+\hline {\zihao{4}\kaishu \bf ~~\mySupervisorName~~}\\ 
+\hline {\zihao{4}\kaishu \bf  ~~\mygrade~~}\\
+\hline{\zihao{4}\kaishu \bf ~~\myDefenseDate~~ }\\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+%    \renewcommand{\baselinestretch}{\mybaselinestretch}\normalsize % 恢复行距
+\end{titlepage}
+\vfill % 填充剩余空间，避免自动分页

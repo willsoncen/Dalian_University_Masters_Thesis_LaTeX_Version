@@ -1,0 +1,120 @@
+\documentclass[twoside]{dlu-thesis}
+
+
+\usepackage{listings}
+\usepackage{varwidth}  % 提供varwidth环境
+\usepackage{calc}      % 用于长度计算
+
+
+\lstdefinestyle{lfonts}{
+    basicstyle   = \footnotesize\ttfamily,
+    stringstyle  = \color{purple},
+    keywordstyle = \color{blue!60!black}\bfseries,
+    commentstyle = \color{olive},
+}
+
+\lstdefinestyle{lnumbers}{
+    numbers     = left,
+    numberstyle = \tiny,
+    numbersep   = 1em,
+    firstnumber = 1,
+    stepnumber  = 1,
+}
+
+\lstdefinestyle{llayout}{
+    breaklines = true,
+    tabsize    = 2,
+    % columns    = flexible,
+}
+
+\lstdefinestyle{lgeometry}{
+    xleftmargin  = 20pt,
+    xrightmargin = 0pt,
+    frame        = tb,
+    framesep     = \fboxsep,
+    framexleftmargin = 20pt,
+}
+
+\lstdefinestyle{lstrings}{
+    showstringspaces = false,
+}
+
+\lstdefinestyle{lgeneral}{
+    style = lfonts,
+    style = lnumbers,
+    style = llayout,
+    style = lgeometry,
+    style = lstrings,
+}
+
+\lstdefinestyle{TeX}{
+    language = {tex},
+    style    = lgeneral,
+}
+
+\input{chapters/info.tex} % 在导言区包含信息定义文件
+
+\begin{document}
+%-----------------------------------------------------------------------------------------------------------------------
+
+
+\pagestyle{empty} % 设置封面和声明页为无页眉页脚样式
+    \input {preface/cover}
+    \input {preface/cover-en}
+\cleardoublepage 
+
+% 确保原创性声明 PDF 从奇数页开始
+\includepdf[pages=-]{statement.pdf}
+\cleardoublepage
+
+\frontmatter
+\pagestyle{dlu@headings}
+
+% 先添加版权页到目录（此时还未生成目录）
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{版权声明}  % 先添加到目录
+%\includepdf[pages=-]{copyright.pdf}
+
+\input{abstract/abstract}
+\input{abstract/abstract-en}
+
+
+
+%-----------------------------------------------------------------------------------------------------------------------
+\mktoc
+%-----------------------------------------------------------------------------------------------------------------------
+
+
+\mainmatter
+%\let\cleardoublepage\clearpage
+
+\include{chapters/chapter-1}
+\include{chapters/chapter-2}
+\include{chapters/chapter-3}
+\include{chapters/chapter-4}
+\include{chapters/chapter-5}
+
+\include{chapters/conclusion}
+
+%-----------------------------------------------------------------------------------------------------------------------
+
+\bibliography{references/paper-manual}
+
+%-----------------------------------------------------------------------------------------------------------------------
+\appendix
+\include{chapters/appendix}
+
+
+%-----------------------------------------------------------------------------------------------------------------------
+%\backmatter
+\include{achievements/achievements}
+\include{acknowledgement/acknowledgement}
+
+
+\cleardoublepage
+\phantomsection  % 为超链接添加锚点
+\addcontentsline{toc}{chapter}{大连大学学位论文版权使用授权书}  % 添加到一级目录
+\includepdf[pages=-]{copyright.pdf}
+%-----------------------------------------------------------------------------------------------------------------------
+\end{document}
