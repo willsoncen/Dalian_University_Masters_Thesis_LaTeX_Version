@@ -1,6 +1,38 @@
-# Dalian_University_Masters_Thesis_LaTeX_Version
-基本实现了大连大学硕士学位论文的模板
+# Dalian University Masters Thesis LaTeX Template
 
-如有需要可以自行fork修改，也可以提交分支意见
+## Project Information
+- **Repository**: [Dalian_University_Masters_Thesis_LaTeX_Version](https://github.com/willsoncen/Dalian_University_Masters_Thesis_LaTeX_Version)
+- **License**: MIT
+- **Maintainer**: WillsonCen
+- **Email**: willsoncen@outlook.com
 
-# 最后，如果使用，请标注来源
+## About the Project
+
+This project provides a comprehensive LaTeX template for Dalian University Master's degree theses. It is designed to help graduate students efficiently write their academic theses using the LaTeX typesetting system. The template strictly adheres to the formatting requirements specified by the Graduate School of Dalian University, covering all essential components of the thesis including cover page, abstract, table of contents, main chapters, references, and appendices.
+
+### Features:
+- Complete compliance with Dalian University's graduate thesis formatting standards
+- Detailed documentation and examples for ease of use
+- Templates for common elements such as mathematical formulas, tables, and figure insertions
+- Support for mixed Chinese and English content to meet international requirements
+- Bibliography formatting that conforms to the GBT7714-2005 standard
+
+## Purpose
+
+This project aims to address the formatting challenges faced by Dalian University graduate students when writing their theses. By providing a standardized LaTeX template, we enable researchers to focus on thesis content rather than formatting issues, while ensuring professional and consistent document presentation.
+
+As an open-source project, our goals are to:
+1. Provide a convenient thesis writing tool for Dalian University graduate students
+2. Promote the use of LaTeX in academic writing
+3. Continuously improve the template through community collaboration
+4. Serve as a reference for similar template development at other universities
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Acknowledgments
+
+本项目由[VTEXS](https://vtexs.com/opensource)的开源项目要免费VPS计划提供算力支持。
