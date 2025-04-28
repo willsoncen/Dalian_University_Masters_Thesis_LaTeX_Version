@@ -35,4 +35,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-本项目由[VTEXS](https://vtexs.com/opensource)的开源项目要免费VPS计划提供算力支持。
